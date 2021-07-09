@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment.PaymentFragment">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+
+    <RelativeLayout
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <TextView
         android:fontFamily="@font/poppinssemibold"
         android:textSize="20sp"
@@ -15,12 +20,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
+        android:drawableBottom="@drawable/ic_scan"
         android:text="Scan Here"/>
-
-    <FrameLayout
-        android:id="@+id/scan"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
     <TextView
         android:fontFamily="@font/poppinsmedium"
@@ -28,10 +29,22 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:textColor="@color/black"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
+        android:background="@color/white"
+        android:layout_marginBottom="120dp"
         android:textAlignment="center"
-        android:text="or Input your code payment\n here"/>
-
+        android:text="@string/or_input_your_code_payment_n_here"/>
+    <TextView
+        android:fontFamily="@font/poppinsbold"
+        android:textSize="20sp"
+        android:background="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:textColor="#0066FF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        android:textAlignment="center"
+        android:text="Here"/>
 </RelativeLayout>

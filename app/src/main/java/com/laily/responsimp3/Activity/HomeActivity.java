@@ -1,9 +1,14 @@
 package com.laily.responsimp3.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.WindowManager;
@@ -18,9 +23,8 @@ import com.laily.responsimp3.R;
 import static android.content.ContentValues.TAG;
 
 public class HomeActivity extends AppCompatActivity {
+    private static final int MY_PERMISSIONS_CAMERA = 11;
     ChipNavigationBar BottomNav;
-    private long backPressedTime;
-    private Fragment fragment = null;
     FragmentManager fragmentManager;
 
     @Override
@@ -28,7 +32,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-
+        initFunctionality();
 
         BottomNav = findViewById(R.id.bottomBar);
         if (savedInstanceState == null) {
@@ -73,6 +77,15 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
+
+    }
+
+    private void initFunctionality() {
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
+                    MY_PERMISSIONS_CAMERA);
+        }
     }
 
 
@@ -80,7 +93,5 @@ public class HomeActivity extends AppCompatActivity {
     public void onBackPressed() {
         finish();
         super.onBackPressed();
-
-
     }
 }
