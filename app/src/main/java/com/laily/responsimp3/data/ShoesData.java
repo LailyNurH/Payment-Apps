@@ -1,4 +1,7 @@
-package com.laily.responsimp3;
+package com.laily.responsimp3.data;
+
+import com.laily.responsimp3.R;
+import com.laily.responsimp3.model.Shoes;
 
 import java.util.ArrayList;
 

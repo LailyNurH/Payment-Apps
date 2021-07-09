@@ -10,11 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ResponsiMP3">
-        <activity android:name=".Activity.PaymentActivity"></activity>
-        <activity android:name=".Activity.RegisterActivity" />
-        <activity android:name=".Activity.HomeActivity" />
-        <activity android:name=".Activity.RecoveryActivity" />
-        <activity android:name=".Activity.MainActivity">
+        <activity android:name=".view.PaymentActivity"></activity>
+        <activity android:name=".view.RegisterActivity" />
+        <activity android:name=".view.HomeActivity" />
+        <activity android:name=".view.RecoveryActivity" />
+        <activity android:name=".view.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

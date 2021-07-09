@@ -1,4 +1,4 @@
-package com.laily.responsimp3.Activity;
+package com.laily.responsimp3.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 

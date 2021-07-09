@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.HomeFragment">
 
-
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
@@ -15,6 +14,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Hello, "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:fontFamily="@font/poppinssemibold"
+        android:text="Users "
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textView4"
@@ -44,7 +70,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="30dp"
         android:elevation="20dp"
         app:cardBackgroundColor="#585666"
@@ -73,6 +99,7 @@
                 android:background="@drawable/history" />
 
             <ImageView
+                android:id="@+id/logout"
                 android:layout_width="46dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="50dp"

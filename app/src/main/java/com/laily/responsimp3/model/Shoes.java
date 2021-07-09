@@ -1,4 +1,4 @@
-package com.laily.responsimp3;
+package com.laily.responsimp3.model;
 
 public class Shoes {
     private String rating;
