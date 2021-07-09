@@ -47,6 +47,7 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHold
         holder.name.setText(shoes.getShoesname());
         holder.type.setText(shoes.getType());
         holder.price.setText(shoes.getPrice());
+        holder.rating.setText(shoes.getRating());
 
         final Context mContext = holder.itemView.getContext();
 
@@ -67,7 +68,7 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHold
 
     public class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgshoes;
-        TextView name, type, price;
+        TextView name, type, price,rating;
 
         public ListViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
@@ -76,13 +77,14 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHold
             name = itemView.findViewById(R.id.shoesname);
             type = itemView.findViewById(R.id.typeshoes);
             price = itemView.findViewById(R.id.price);
+            rating = itemView.findViewById(R.id.rating);
 
 
         }
     }
 
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
-        this.onItemClickCallback = onItemClickCallback;
+    public static void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
+        onItemClickCallback = onItemClickCallback;
     }
 
     public interface OnItemClickCallback {

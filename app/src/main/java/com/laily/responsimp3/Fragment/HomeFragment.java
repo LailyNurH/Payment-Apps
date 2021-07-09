@@ -50,16 +50,16 @@ public class HomeFragment extends Fragment {
         ShoesAdapter shoesAdapter = new ShoesAdapter(list);
         rvshoes.setAdapter(shoesAdapter);
 
-//        ShoesAdapter.setOnItemClickCallback(new ShoesAdapter.OnItemClickCallback() {
-//            @Override
-//            public void onItemClicked(Shoes data) {
-//
-//                showSelectedBook(data);
+        ShoesAdapter.setOnItemClickCallback(new ShoesAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(Shoes data) {
+
+                showSelectedBook(data);
             }
-//
-//            private void showSelectedBook(Shoes data) {
-//                Toast.makeText(getContext(), "You Selected " + data.getShoesname(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+
+            private void showSelectedBook(Shoes data) {
+                Toast.makeText(getContext(), "You Selected " + data.getShoesname(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
-//    }
+}

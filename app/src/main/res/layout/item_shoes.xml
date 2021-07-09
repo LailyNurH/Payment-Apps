@@ -20,6 +20,7 @@
             android:layout_height="wrap_content">
 
             <TextView
+                android:id="@+id/rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -67,7 +68,7 @@
                 android:fontFamily="@font/poppinsmedium"
                 android:text=" $ 13,995"
                 android:textColor="#464646" />
-<!--            https://github.com/LailyNurH/responsi-mobile-programming3.git-->
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 

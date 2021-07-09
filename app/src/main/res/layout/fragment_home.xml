@@ -23,7 +23,7 @@
         android:layout_marginTop="40dp"
         android:fontFamily="@font/poppinsmedium"
         android:text="Bayar Dulu"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -106,26 +106,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvShoes"
+    <RelativeLayout
+        android:id="@+id/relativeLayout7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="55dp"
-        app:spanCount="2"
-        android:paddingBottom="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        android:layout_marginBottom="100dp"
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rvShoes"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="0dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvShoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="24dp"
+            app:spanCount="2" />
+
+    </RelativeLayout>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
