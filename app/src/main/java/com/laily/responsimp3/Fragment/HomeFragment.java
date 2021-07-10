@@ -45,8 +45,8 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
 
-        user = view.findViewById(R.id.user);
-        logout = view.findViewById(R.id.logout);
+
+        logout = view.findViewById(R.id.logoutt);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,10 +55,7 @@ public class HomeFragment extends Fragment {
                 startActivity(new Intent(getActivity(), MainActivity.class));
             }
         });
-        sharedprefManager = new SharedprefManager(getContext());
-        SharedPreferences sharedPreferences= this.getActivity().getSharedPreferences("Login2", Context.MODE_PRIVATE);
-        String name = sharedPreferences.getString("sp_name","User");
-        user.setText(name);
+
         rvshoes = view.findViewById(R.id.rvShoes);
         rvshoes.setHasFixedSize(true);
 

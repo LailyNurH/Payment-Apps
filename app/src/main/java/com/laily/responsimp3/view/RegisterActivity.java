@@ -36,7 +36,7 @@ public class RegisterActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(RegisterActivity.this,MainActivity.class);
+                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -48,27 +48,27 @@ public class RegisterActivity extends AppCompatActivity {
                 String rpass = et_Pass.getText().toString();
                 String confrimpass = et_confrimpass.getText().toString();
 
-                if (et_Pass.equals(et_confrimpass)) {
+                if (!et_Pass.equals(et_confrimpass)) {
 
                     Users users = new Users(remail, rpass);
                     userViewModel.insertuser(users);
 
                     et_Email.setText("");
                     et_Pass.setText("");
-                    et_confrimpass.setText("");
+//                    et_confrimpass.setText("");
 
 
                     Toast.makeText(RegisterActivity.this, "Registration Success", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(RegisterActivity.this, MainActivity.class));
 
-                } else if( rpass.isEmpty() || remail.isEmpty()||confrimpass.isEmpty()){
+                } else if (rpass.isEmpty() || remail.isEmpty() || confrimpass.isEmpty()) {
                     Toast.makeText(RegisterActivity.this, "Fill all the box.", Toast.LENGTH_SHORT).show();
-                } else{
-//,confrimpass
+                } else {
+
                     Toast.makeText(RegisterActivity.this, "Password Harus Sama", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
-    }
+}
 
