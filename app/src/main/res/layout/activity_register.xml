@@ -39,6 +39,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView6">
+
         <EditText
             android:id="@+id/remail"
             android:layout_width="match_parent"
@@ -52,13 +53,14 @@
             android:paddingTop="10dp"
             android:paddingBottom="5dp"
             android:textSize="20sp" />
+
         <EditText
-            android:layout_marginTop="20dp"
-            android:layout_below="@id/remail"
             android:id="@+id/rpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/remail"
             android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/etbg"
             android:fontFamily="@font/poppinsregular"
@@ -69,58 +71,75 @@
             android:paddingBottom="5dp"
             android:textSize="20sp" />
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/remail"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="30dp"-->
-<!--            android:layout_marginEnd="30dp"-->
-<!--            android:background="@drawable/etbg"-->
-<!--            android:hint="Email"-->
-<!--            android:paddingStart="10dp">-->
+        <EditText
+            android:id="@+id/confrimpass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rpassword"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/etbg"
+            android:fontFamily="@font/poppinsregular"
+            android:hint="Confrim Password"
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:textSize="20sp" />
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="textEmailAddress" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/remail"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:background="@drawable/etbg"-->
+        <!--            android:hint="Email"-->
+        <!--            android:paddingStart="10dp">-->
 
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/rpassword"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/remail"-->
-<!--            android:layout_marginStart="30dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="30dp"-->
-<!--            android:background="@drawable/etbg"-->
-<!--            android:hint="Password"-->
-<!--            android:paddingStart="10dp"-->
-<!--            app:endIconMode="password_toggle">-->
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:inputType="textEmailAddress" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="textPassword" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
-<!--        <com.google.android.material.textfield.TextInputLayout-->
-<!--            android:id="@+id/confrimpassword"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@id/rpassword"-->
-<!--            android:layout_marginStart="30dp"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:layout_marginEnd="30dp"-->
-<!--            android:background="@drawable/etbg"-->
-<!--            android:hint="Password"-->
-<!--            android:paddingStart="10dp"-->
-<!--            app:endIconMode="password_toggle">-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/rpassword"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/remail"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:background="@drawable/etbg"-->
+        <!--            android:hint="Password"-->
+        <!--            android:paddingStart="10dp"-->
+        <!--            app:endIconMode="password_toggle">-->
 
-<!--            <com.google.android.material.textfield.TextInputEditText-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:inputType="textPassword" />-->
-<!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:inputType="textPassword" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/confrimpassword"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/rpassword"-->
+        <!--            android:layout_marginStart="30dp"-->
+        <!--            android:layout_marginTop="20dp"-->
+        <!--            android:layout_marginEnd="30dp"-->
+        <!--            android:background="@drawable/etbg"-->
+        <!--            android:hint="Password"-->
+        <!--            android:paddingStart="10dp"-->
+        <!--            app:endIconMode="password_toggle">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:inputType="textPassword" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
     </RelativeLayout>
 
     <Button
@@ -140,6 +159,7 @@
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout" />
 
     <TextView
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

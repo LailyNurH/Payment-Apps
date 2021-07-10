@@ -4,6 +4,8 @@ import androidx.room.Dao;
 import androidx.room.Insert;
 import androidx.room.Query;
 
+import com.laily.responsimp3.model.Users;
+
 @Dao
 public interface UserDao {
 

@@ -1,4 +1,4 @@
-package com.laily.responsimp3.DB;
+package com.laily.responsimp3.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

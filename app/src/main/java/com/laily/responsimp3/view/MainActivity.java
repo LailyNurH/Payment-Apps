@@ -16,15 +16,14 @@ import android.widget.Toast;
 
 import com.laily.responsimp3.DB.UserDB;
 import com.laily.responsimp3.DB.UserDao;
-import com.laily.responsimp3.DB.UserViewModel;
-import com.laily.responsimp3.DB.Users;
-import com.laily.responsimp3.Fragment.HomeFragment;
+import com.laily.responsimp3.viewmodel.UserViewModel;
+import com.laily.responsimp3.model.Users;
 import com.laily.responsimp3.R;
 
 public class MainActivity extends AppCompatActivity {
     Button Login;
     EditText etEmail, etPass;
-    TextView register;
+    TextView register,tvrecovery;
     private SharedprefManager sharedprefManager;
     UserViewModel userViewModel;
 
@@ -39,6 +38,14 @@ public class MainActivity extends AppCompatActivity {
         etEmail = findViewById(R.id.email);
         etPass = findViewById(R.id.password);
         Login = findViewById(R.id.btnLogin);
+        tvrecovery = findViewById(R.id.textView);
+        tvrecovery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,RecoveryActivity.class);
+                startActivity(intent);
+            }
+        });
         register = findViewById(R.id.tv_signup);
         register.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,11 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.laily.responsimp3.R;
 import com.laily.responsimp3.model.Shoes;
-import com.laily.responsimp3.ShoesAdapter;
+import com.laily.responsimp3.Adapter.ShoesAdapter;
 import com.laily.responsimp3.data.ShoesData;
 import com.laily.responsimp3.view.MainActivity;
 import com.laily.responsimp3.view.SharedprefManager;
@@ -44,6 +43,8 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
         user = view.findViewById(R.id.user);
         logout = view.findViewById(R.id.logout);
 
@@ -55,8 +56,8 @@ public class HomeFragment extends Fragment {
             }
         });
         sharedprefManager = new SharedprefManager(getContext());
-        SharedPreferences sharedPreferences= this.getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
-        String name = sharedPreferences.getString("sp_name","Data not found");
+        SharedPreferences sharedPreferences= this.getActivity().getSharedPreferences("Login2", Context.MODE_PRIVATE);
+        String name = sharedPreferences.getString("sp_name","User");
         user.setText(name);
         rvshoes = view.findViewById(R.id.rvShoes);
         rvshoes.setHasFixedSize(true);
@@ -67,24 +68,11 @@ public class HomeFragment extends Fragment {
 
     }
 
-
-
     private void showRecyclerList() {
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getContext(), 2);
         rvshoes.setLayoutManager(mLayoutManager);
         ShoesAdapter shoesAdapter = new ShoesAdapter(list);
         rvshoes.setAdapter(shoesAdapter);
 
-        ShoesAdapter.setOnItemClickCallback(new ShoesAdapter.OnItemClickCallback() {
-            @Override
-            public void onItemClicked(Shoes data) {
-
-                showSelectedBook(data);
-            }
-
-            private void showSelectedBook(Shoes data) {
-                Toast.makeText(getContext(), "You Selected " + data.getShoesname(), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

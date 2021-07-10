@@ -1,19 +1,21 @@
-package com.laily.responsimp3.DB;
+package com.laily.responsimp3.viewmodel;
 
 import android.app.Application;
 import android.os.AsyncTask;
-import android.provider.ContactsContract;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
-import androidx.room.Insert;
+
+import com.laily.responsimp3.DB.UserDB;
+import com.laily.responsimp3.DB.UserDao;
+import com.laily.responsimp3.model.Users;
 
 import org.jetbrains.annotations.NotNull;
 
 public class UserViewModel extends AndroidViewModel {
 
-    private  UserDao userDao;
-    private  UserDB userDB;
+    private UserDao userDao;
+    private UserDB userDB;
     public UserViewModel(@NonNull @NotNull Application application) {
         super(application);
         userDB = UserDB.getDatabase(application);

@@ -1,4 +1,4 @@
-package com.laily.responsimp3;
+package com.laily.responsimp3.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.laily.responsimp3.R;
 import com.laily.responsimp3.model.Shoes;
 
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +22,6 @@ import java.util.ArrayList;
 public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHolder> {
     private final ArrayList<Shoes> listShoes;
     private Context context;
-    private OnItemClickCallback onItemClickCallback;
 
 
     public ShoesAdapter(ArrayList<Shoes> listShoes) {
@@ -51,13 +51,7 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHold
 
         final Context mContext = holder.itemView.getContext();
 
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onItemClickCallback.onItemClicked(listShoes.get(holder.getAdapterPosition()));
 
-            }
-        });
 
     }
 
@@ -81,13 +75,5 @@ public class ShoesAdapter extends RecyclerView.Adapter<ShoesAdapter.ListViewHold
 
 
         }
-    }
-
-    public static void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
-        onItemClickCallback = onItemClickCallback;
-    }
-
-    public interface OnItemClickCallback {
-        void onItemClicked(Shoes data);
     }
 }

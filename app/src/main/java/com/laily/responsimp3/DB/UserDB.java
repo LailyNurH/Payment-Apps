@@ -4,9 +4,10 @@ package com.laily.responsimp3.DB;
 import android.content.Context;
 
 import androidx.room.Database;
-import androidx.room.Entity;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+
+import com.laily.responsimp3.model.Users;
 
 @Database(entities = Users.class , version =1 )
 public abstract class UserDB extends RoomDatabase {

@@ -36,6 +36,7 @@
         android:textAlignment="center"
         android:text="@string/or_input_your_code_payment_n_here"/>
     <TextView
+        android:id="@+id/txhere"
         android:fontFamily="@font/poppinsbold"
         android:textSize="20sp"
         android:background="@color/white"

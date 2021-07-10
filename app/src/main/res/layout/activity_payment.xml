@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".view.PaymentActivity">
     <ImageView
-        android:id="@+id/arrow"
+        android:id="@+id/arrowpay"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="32dp"

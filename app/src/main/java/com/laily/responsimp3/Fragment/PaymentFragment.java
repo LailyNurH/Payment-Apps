@@ -3,6 +3,7 @@ package com.laily.responsimp3.Fragment;
 import android.app.Activity;
 import android.content.Context;
 
+import android.content.Intent;
 import android.hardware.Camera;
 import android.os.Bundle;
 
@@ -12,9 +13,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.zxing.Result;
 import com.laily.responsimp3.R;
+import com.laily.responsimp3.view.PaymentActivity;
 
 import java.util.ArrayList;
 
@@ -28,7 +31,7 @@ public class PaymentFragment extends Fragment {
 
     private Activity mActivity;
     private Context mContext;
-
+    private TextView here;
     private ViewGroup contentFrame;
     private ZXingScannerView zXingScannerView;
     private int camId;
@@ -44,6 +47,15 @@ public class PaymentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_payment, container, false);
+
+        here = rootView.findViewById(R.id.txhere);
+        here.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PaymentActivity.class);
+                startActivity(intent);
+            }
+        });
         initView(rootView);
         return rootView;
     }
